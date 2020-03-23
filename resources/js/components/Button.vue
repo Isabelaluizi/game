@@ -2,13 +2,13 @@
 <div class="container">
     <div class="row">
     <div class="col-sm">
-        <h3 class="text" @click="sendRock">Rock</h3>
+        <h3 class="center btn btn-outline-danger btn-lg my-style btn-block"  @click="sendRock">Rock</h3>
    </div>
    <div class="col-sm">
-   <h3 class="text" @click="sendPaper">Paper</h3>
+   <h3 class="center btn btn-outline-danger btn-lg my-style btn-block" @click="sendPaper">Paper</h3>
    </div>
    <div class="col-sm">
-   <h3 class="text" @click="sendScissors">Scissors</h3>
+   <h3 class="center btn btn-outline-danger btn-lg my-style btn-block" @click="sendScissors">Scissors</h3>
    </div>
    </div>
 </div>
@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style scoped>
-.text {
-    text-align: center;
-}
+
+
 </style>

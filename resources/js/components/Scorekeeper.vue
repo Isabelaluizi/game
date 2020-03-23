@@ -2,12 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="text"> Cpu</h3>
-                <h4 class="text"> {{ cpuScore }}</h4>
+                <h3 class="text">Player: {{ userScore }}</h3>
+
             </div>
              <div class="col">
-                <h3 class="text">Player</h3>
-                <h4 class="text"> {{ userScore }}</h4>
+                <h3 class="text"> Cpu: {{ cpuScore }}</h3>
             </div>
         </div>
     </div>
@@ -49,20 +48,27 @@ export default {
         incrWinner() {
             if(this.userSelectedChoice=="Paper") {
                 if(this.cpuSelectedChoice == "Scissors") {
+                    this.$root.$emit('showMessageCpu');
                     this.cpuScore++;
+
                 }else if(this.cpuSelectedChoice =="Rock") {
+                    this.$root.$emit('showMessageUser');
                     this.userScore++;
                 }
             } else if(this.userSelectedChoice=="Scissors") {
                 if(this.cpuSelectedChoice == "Paper") {
+                    this.$root.$emit('showMessageUser');
                     this.userScore++;
                 }else if(this.cpuSelectedChoice =="Rock") {
+                    this.$root.$emit('showMessageCpu');
                     this.cpuScore++;
                 }
             } else if(this.userSelectedChoice=="Rock") {
                 if(this.cpuSelectedChoice == "Scissors") {
+                    this.$root.$emit('showMessageUser');
                     this.userScore++;
                 } else if(this.cpuSelectedChoice =="Paper") {
+                    this.$root.$emit('showMessageCpu');
                     this.cpuScore++;
                 }
 

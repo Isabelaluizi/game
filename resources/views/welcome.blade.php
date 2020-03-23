@@ -9,9 +9,24 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+        <style>
+         #title {
+            font-family: 'WaltographRegular';
+            font-size: 30px;
+            margin-top:5vh;
+         }
+         #title-img {
+             display:block;
+             margin:auto;
+             width:30%;
+         }
+        </style>
 
     </head>
     <body>
+        <h1 class="text-center" id="title"> Welcome to Rock, Paper Scissors Game </h1>
+    <img id="title-img" src="{{asset('mickey-minnie-dancing.png')}}">
         <div class="container" id="app">
         <Root />
         </div>

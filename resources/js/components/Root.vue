@@ -1,11 +1,13 @@
 <template>
-<div class="container">
+<div id="box" class="container">
+    <h6 v-if="this.ind=='1'" class="text-center">{{ messageUser }}</h6>
+    <h6 v-else class="text-center">{{ messageCpu }}</h6>
     <div class="row">
         <Scorekeeper />
     </div>
     <div class="row">
         <div class="col">
-             <User />
+            <User />
         </div>
         <div class="col">
            <Cpu />
@@ -31,6 +33,38 @@ import Scorekeeper from './Scorekeeper.vue'
             Cpu,
             User,
             Scorekeeper
+        },
+        data() {
+            return {
+                messageUser: "Let´s start",
+                messageCpu:"",
+                ind:"1"
+            }
+        },
+        mounted: function() {
+        this.$root.$on('showMessageUser', this.sendUserMessage);
+        this.$root.$on('showMessageCpu',this.sendCpuMessage);
+    },
+    methods: {
+        sendUserMessage() {
+            this.ind="1";
+            this.messageUser = "Congratulations!!!";
+        },
+        sendCpuMessage() {
+            this.ind="0";
+            this.messageCpu = "Oh boy! :("
         }
     }
+    }
 </script>
+
+<style>
+
+div {
+    background-color:#f6f6f6;
+}
+#box {
+    padding-top:2vh;
+}
+
+</style>
