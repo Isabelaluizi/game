@@ -1,6 +1,6 @@
 <template>
-    <div >
-    <h4>{{ cpuChoice }}</h4>
+    <div>
+    <h4 class="text">{{ cpuChoice }}</h4>
     </div>
 </template>
 
@@ -36,5 +36,8 @@ export default {
 </script>
 
 <style scoped>
+.text {
+    text-align:center;
+}
 
 </style>

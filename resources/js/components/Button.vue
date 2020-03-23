@@ -1,8 +1,16 @@
 <template>
-<div>
-   <h3 @click="sendRock">Rock</h3>
-   <h3 @click="sendPaper">Paper</h3>
-   <h3 @click="sendScissors">Scissors</h3>
+<div class="container">
+    <div class="row">
+    <div class="col-sm">
+        <h3 class="text" @click="sendRock">Rock</h3>
+   </div>
+   <div class="col-sm">
+   <h3 class="text" @click="sendPaper">Paper</h3>
+   </div>
+   <div class="col-sm">
+   <h3 class="text" @click="sendScissors">Scissors</h3>
+   </div>
+   </div>
 </div>
 </template>
 
@@ -24,5 +32,7 @@ export default {
 </script>
 
 <style scoped>
-
+.text {
+    text-align: center;
+}
 </style>

@@ -1,7 +1,15 @@
 <template>
-    <div >
-    <h4>Cpu: {{ cpuScore }}</h4>
-    <h4>User: {{ userScore }}</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text"> Cpu</h3>
+                <h4 class="text"> {{ cpuScore }}</h4>
+            </div>
+             <div class="col">
+                <h3 class="text">Player</h3>
+                <h4 class="text"> {{ userScore }}</h4>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -69,5 +77,7 @@ export default {
 </script>
 
 <style scoped>
-
+.text {
+    text-align:center;
+}
 </style>

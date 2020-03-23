@@ -1,9 +1,19 @@
 <template>
-<div>
-    <Cpu />
-    <User />
-    <Button />
-    <Scorekeeper />
+<div class="container">
+    <div class="row">
+        <Scorekeeper />
+    </div>
+    <div class="row">
+        <div class="col">
+             <User />
+        </div>
+        <div class="col">
+           <Cpu />
+        </div>
+    </div>
+    <div class="row">
+        <Button />
+    </div>
 </div>
 
 </template>

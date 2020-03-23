@@ -1,6 +1,6 @@
 <template>
     <div>
-    <h1>{{ userChoice }}</h1>
+    <h4 class="text">{{ userChoice }}</h4>
     </div>
 </template>
 
@@ -37,5 +37,7 @@ export default {
 </script>
 
 <style scoped>
-
+.text {
+    text-align:center;
+}
 </style>
